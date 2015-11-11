@@ -1,3 +1,38 @@
+// This package is a JavaScript client of the Halo 5 Developer's API [Beta], written in TypeScript (a superset of JavaScript) and transpiled into a Node JS module.
+
+// It provides one function for each endpoint, returning a promise. There are some additional functions that offer alternate access to some endpoints.
+
+// ## Links
+
+// <table cellpadding=5>
+// <tr>
+// <td> [![NPM](https://logo.clearbit.com/npmjs.com)](https://www.npmjs.com/package/haloapi "NPM Package") </td>
+// <td> [![Documentation](http://typedoc.io/assets/images/logo-128.png)](https://derflatulator.github.io/haloapi.js/typedoc/ "Documentation") </td>
+// </tr>
+// <tr>
+// <td>[NPM Package](https://www.npmjs.com/package/haloapi)</td>
+// <td>[Full Documentation](https://derflatulator.github.io/haloapi.js/typedoc/)</td>
+// </tr>
+// <tr><td colspan=2></td></tr>
+// <tr>
+// <td>[![GitHub](https://logo.clearbit.com/github.com)](https://github.com/DerFlatulator/haloapi.js "GitHub") </td>
+// <td>[![Halo Waypoint](https://logo.clearbit.com/halowaypoint.com)](https://www.halowaypoint.com/en-us/forums/01b3ca58f06c4bd4ad074d8794d2cf86/topics/binding-javascript-node-js-module/bc2b9b9a-cef3-4394-b56e-523eb68aa9e6/posts "Halo Waypoint Thread") </td>
+// </tr>
+// <tr>
+// <td>[GitHub Repository](https://github.com/DerFlatulator/haloapi.js)</td>
+// <td>[Waypoint Thread](https://www.halowaypoint.com/en-us/forums/01b3ca58f06c4bd4ad074d8794d2cf86/topics/binding-javascript-node-js-module/bc2b9b9a-cef3-4394-b56e-523eb68aa9e6/posts)</td>
+// </table>
+
+// ## Installation 
+
+// This project can be installed as a node module with
+
+$ npm install haloapi --save
+
+// If you don't have Node or NPM, go ahead and [install it](https://nodejs.org/en/download/).
+
+// Requires Node version `0.11` or later.
+
 // ## Initialization
 
 // Create an instance of the API wrapper, providing your API key.
@@ -168,7 +203,7 @@ api.metadata.vehicles().then(console.log);
 
 // Get an array of all weapons in the game. 
 
-api.metadata.weapons();
+api.metadata.weapons().then(console.log);
 
 // ## Stats Endpoints
 

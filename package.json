@@ -1,6 +1,6 @@
 {
   "name": "haloapi",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "JavaScript wrapper of the Halo 5 Developer's API using TypeScript.",
   "main": "js/index.js",
   "typings": "js/haloapi",
@@ -10,7 +10,8 @@
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
     "minor-release": "npm version minor && npm publish && git push --follow-tags",
     "clean": "rm js/*.js",
-    "document": "./node_modules/.bin/docco -o ./docs/docco/ ./examples/docs/*.js  && typedoc --out docs/tsdoc/ ./ts/index.ts --module commonjs --includeDeclarations",
+    "document": "./node_modules/.bin/docco -o ./docs/docco/ ./examples/docs/*.js",
+    "typedoc": "./node_modules/.bin/typedoc --name haloapi.js --readme ./docs/TSREADME.md --theme minimal --out docs/typedoc/ ./ts/index.ts --module commonjs --includeDeclarations --externalPattern **/{haloapi,metadata,stats,profile}** --excludeExternals",
     "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "repository": {
